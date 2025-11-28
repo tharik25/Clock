@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clock Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="clock">
+    <div id="hours" class="hand hour"></div>
+    <div id="minutes" class="hand minute"></div>
+    <div id="seconds" class="hand second"></div>
+    <div class="center"></div>
+  </div>
+  <script src="Clock_Wizard.js"></script>
+  <script>
+    $(document).ready(function () {
+      if (typeof clockRotation === 'function') {
+        clockRotation();
+      }
+    });
+  </script>
+</body>
+</html>
