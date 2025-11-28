@@ -8,11 +8,30 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <div class="clock">
+  <div class="clock" role="img" aria-label="Analog clock showing the current time">
+    <div class="ticks" aria-hidden="true"></div>
+    <div class="brand">HIKMAT</div>
+    <div class="brand-watermark" tabindex="0" role="button" aria-label="HIKMAT brand watermark">HIKMAT</div>
+    <div class="numbers" aria-hidden="true"></div>
+      <div class="info-board" aria-hidden="false">
+        <!-- Old circular months/dates removed; show a flight-board-style info board below watermark -->
+        <div class="months-list" aria-label="Months list"></div>
+        <div class="dates-list" aria-label="Dates list"></div>
+      </div>
     <div id="hours" class="hand hour"></div>
     <div id="minutes" class="hand minute"></div>
     <div id="seconds" class="hand second"></div>
     <div class="center"></div>
+  </div>
+  <div class="controls">
+    <div class="display">
+      <div class="digital" aria-live="polite"></div>
+      <div class="date" aria-live="polite"></div>
+    </div>
+    <div class="toggles">
+      <label><input id="smoothToggle" type="checkbox" checked> Smooth motion</label>
+      <label><input id="themeToggle" type="checkbox"> Dark theme</label>
+    </div>
   </div>
   <script src="Clock_Wizard.js"></script>
   <script>
